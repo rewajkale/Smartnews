@@ -91,7 +91,14 @@ footer {
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAflBMVEX///8AAADHx8c8PDxxcXGZmZna2tp2dnbExMTAwMDo6Ohra2s0NDSMjIxfX185OTnv7+/29vZXV1f5+fnU1NQNDQ1JSUkdHR3f399SUlIoKCjx8fERERGioqKurq63t7eAgICRkZFLS0stLS2dnZ0iIiKoqKhjY2OEhIRDQ0Otr0AgAAAFD0lEQVR4nO2a6XayOhRAAQlDAJkFREGUOrz/C16qrSaQQOBT6Lrr7H9ZadItkJOTQZIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhfgdMoirDHLS+OUugHvdS45bdhni/Wk0sh1igtspW93W7dTaBgqpy9/RkWzsl+skVijcxKfhDHhSKFRFmO3m2IVJnAEWnieWSTG06p8mZ5wdJpntQTu3aosntOlxZEW7JJcrnZVDlQFhb0DnI/5rKCYaoPCBZ4UUHftAYEnfKvC771HY8XVIYE0VtHyfhBkv/xQdI0uZFNdu7tSJW3xtKC+4wSWh0DshwvL+iHZJON50lkOXur3kRBdR0/Jrc4tqo8J8ry4by8oCRp+9eISOnyW4P0ZMEwx+XeUq29if2QLr/bb5pgQ2QghAyNW15ccDZ6BH1Pa/j37A5rvH7yR1Xvc+8TxIaiKNE/C6bf3TD78R9VvYGTLZiiI5mVWjX58WNs6S+cNG2Vc8KtPpHd6+fXisVHVLx3eOs1hiBOzbN+s+PfPH6XBPpZicKnoJatX+ha1Cr/Svh504+dPDvfxetDod1/apgrpb4hqhLraqTM9RZDUDnLXYKr/2uoGWSFq5gKVTZ+nzZOGf3s76lOnh7jbhXzW2wLYiVo1hjd1skpK36+c40SWrUEVz+CYeqsGP2cgiZWpsUq6Va5LmaEUVrwKilF3G16Z1eZYwRzTmJ7QlFoOqyaWFa0cEBwXX6x7R54nrAgVmQeV1PecarUriEtaF8STlP5+xdeS2HBmr+0OloxT3Bz6AwUWnCAHRIWvPS+Ch7JrvMVjhKUM5QLCXraTZ5G2Q7o4wRvqickiEt3oiBqr2jGCcbf+Z6AYHTYytO4VEKCcWKpqmUx4piCRQSVY89g62WlDgvG8iZbVwhVVXB02+Ot+UZEBFe8cTqEbQ0LJrLn/9Ti0m5V6rWIoGF/TnDnIvM57foYteKZipYXpHYuzJqutqqFBZN16w+8hPreT9ZnBQcHidUe5t6aCmm2kKCSTR3F2XVAsBPJ85ra2RATjNRJM518/8b7BHdy2k4nQo0aJmKCGqJS/RHs2wsUWvBr25msQ0xtt4kJpkU7PIkyMBcz0h1JorJLMUEfT0sW4u7WSSthPedvEQxDazVF0A4GBC3Df4ugJOmbKYL3bKlX0GQI1uTDEBX0oimC7RjXEdQ7g/hbkAyEooK55o7PuLL9kCBz82iSoOTp48dJJ1v9pKCUo5GGiRwyPrDPCUrl0JlZi2PA+u8fFJSozfVh2OcrHxU8D535kB3X7J3IjwrmrG0oDq7GmCM+LdggGq9r3gHaZwXD0Bk6enz0Gpi8feBPP8HUFBEMzowAM49gyNuGI6lZM+xMglKYXgfmvNWG+37nEGxWUKhfsP98eQZBnMr8JdRuM3B8NoNgM6P0rPGGjm9nESyZe9INXzY7Os8tGLW2Jx7EcqbXf0NQ4gTDSuD2wDyCjP3COClwzg9/cwt29tS37lrsmHIeQc1p7zRcBS97ziTY2mmwdTMSPYeeRxAr1Dr+JHgVdUZBgxCsR52RzyRoPgSb0HepjFG3DGYSfB7scE/WlxWMnHvKpe6FQt8SgodtvN1kaMK9M0Tlu0xBRIaI70303isBNit9ivQkOUy79VPWwetCRMC8GVYeyDsTaOhShcd4iV5kmhPvqCuF+rpSojKvxxqI+JOq6L+WojJ20AAAAAAAAAAAAAAAmMB/rjNuxWM6oOcAAAAASUVORK5CYII=" style="width:40px;height:40px"><b>{{ user.nickname }}!</b></img>
 
 <aside>
-<h3> <b>****Recommended News ****</b></h3>
+<h3> 
+<a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+</a>
+<div id="awcc1482361167279" class="aw-widget-current"  data-locationkey="" data-unit="f" 
+data-language="en-us" data-useip="true" data-uid="awcc1482361167279"></div>
+<script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+<br><br>
+<b>****Recommended News ****</b></h3>
 <form action="recommendation" method="post" name="checks">
  {% for i in dat %}
 
@@ -155,14 +162,14 @@ footer {
 	<input type="password" name="password" placeholder="Enter your password">
 	<br>
 	<br>
-	<h4><p>Send an sms</p></h4> 
-	<input type ="text" name="to_cell" placeholder="Enter receiver T mobile cellphone number">
+	<h4><p>Send an sms </p></h4> 
+	<input type ="text" name="to_cell" placeholder="Enter receiver Tmobile cellphone number">
   <br>
   <br>
   <input class "button1" style="background-color: #B0C4DE; border-radius: 12px; border: 2px solid #000000;" type="submit" value="Get Similar News --- Send email / sms">
 </form>
 
 <footer>
-© 2016 The Times         --- By Karan Chaudhari (kc3289) and Rewa Jayant Kale (rjk422)
+© 2016 The Times
 </footer>
 {% endblock %}

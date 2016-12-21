@@ -57,3 +57,5 @@ Project by Karan Chaudhari (kc3289) and Rewa Jayant Kale (rjk422):
 
 9)Improved the UI through CSS styles --- By Rewa Jayant Kale
 
+10)Added weather widget using accuweather.com widget to show current weather details --- By Rewa Jayant Kale
+

@@ -1,4 +1,21 @@
 <html>
+<style>
+body {
+				color: #000000;
+				background-color: #f9f8f6;
+				background-image: url("http://cdn3.volusion.com/mache.udhvk/v/vspfiles/photos/R2579-PARENT-2.jpg");
+				background-position: center;
+				font-family: Georgia, Times, serif;
+				line-height: 1.4em;
+				margin: 0px;}
+p {
+				margin: 10px 0px 5px 0px;
+				color : #2F4F4F;
+				padding: 0px;}
+footer {
+				font-size: 80%;
+				padding: 7px 0px 0px 20px;}
+</style>
   <head>
     {% if title %}
     <title>{{ title }} - microblog</title>
@@ -7,11 +24,12 @@
     {% endif %}
   </head>
   <body>
-    <div>Microblog:
+    <div><p><b>Microblog:
         <a href="{{ url_for('index') }}">Home</a>
         {% if g.user.is_authenticated %}
         | <a href="{{ url_for('logout') }}">Logout</a>
-        {% endif %}
+        {% endif %}</b>
+		</p>
     </div>
     <hr>
     {% with messages = get_flashed_messages() %}
@@ -23,6 +41,10 @@
     </ul>
     {% endif %}
     {% endwith %}
-    {% block content %}{% endblock %}
+    {% block content %}
+	<footer>
+© 2016 The Times         --- By Karan Chaudhari (kc3289) and Rewa Jayant Kale (rjk422)
+</footer>
+	{% endblock %}
   </body>
 </html>

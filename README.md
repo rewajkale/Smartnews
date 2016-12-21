@@ -1,4 +1,4 @@
-# Smartnews
+# The Times - Next Generation Smart News
 
 #Application for recommending live news obtained from news api 
 
@@ -35,17 +35,25 @@ Web application built in flask
 
 7)to run the application - `python run.py`
 
+Project by Karan Chaudhari (kc3289) and Rewa Jayant Kale (rjk422):
+
 **Currently completed features -**
 
-1)login(based on openid)
+1)login(based on openid)  --- By Karan Chaudhari
 
-2)news api data extraction
+2)news api data extraction  --- By Karan Chaudhari
 
-3)passing news api data to curate and process articles
+3)passing news api data to curate and process news articles  --- By Karan Chaudhari
 
-4)curate and process obtained data using newspaper article
+4)curate and process obtained data using newspaper library for similar news articles --- By Karan Chaudhari
 
-5)Ui features
+5)Dropdown to select a particular category of news like (business, entertainment, science-and-nature, music, technology, etc.) --- By Rewa Jayant Kale
 
-6)Recommending news articles based on keywords
+6)Storing the data for user views, news articles, recommendations in Elasticsearch  --- By Rewa Jayant Kale
+
+7)Recommending news articles based on user views using NLP algorithm --- By Rewa Jayant Kale
+
+8)Added an additional feature of sending emails (using Gmail address) and sms to any (T mobile number) using MIMEMultipart and MIMEText python libraries  --- By Rewa Jayant Kale
+
+9)Improved the UI through CSS styles --- By Rewa Jayant Kale
 

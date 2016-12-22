@@ -39,23 +39,25 @@ Project by Karan Chaudhari (kc3289) and Rewa Jayant Kale (rjk422):
 
 **Currently completed features -**
 
-1)login(based on openid)  --- By Karan Chaudhari
+1)login(based on openid)
 
-2)news api data extraction  --- By Karan Chaudhari
+2)news api data extraction
 
-3)passing news api data to curate and process news articles  --- By Karan Chaudhari
+3)passing news api data to curate and process news articles
 
-4)curate and process obtained data using newspaper library for similar news articles --- By Karan Chaudhari
+4)curate and process obtained data using newspaper library for similar news articles
 
-5)Dropdown to select a particular category of news like (business, entertainment, science-and-nature, music, technology, etc.) --- By Rewa Jayant Kale
+5)Dropdown to select a particular category of news like (business, entertainment, science-and-nature, music, technology, etc.)
 
-6)Storing the data for user views, news articles, recommendations in Elasticsearch  --- By Rewa Jayant Kale
+6)Storing the data for user views, news articles, recommendations in Elasticsearch
 
-7)Recommending news articles based on user views using NLP algorithm --- By Rewa Jayant Kale
+7)Recommending news articles based on user views using NLP algorithm
 
-8)Added an additional feature of sending emails (using Gmail address) and sms to any (T mobile number) using MIMEMultipart and MIMEText python libraries  --- By Rewa Jayant Kale
+8)Added an additional feature of sending emails (using Gmail address) and sms to any (T mobile number) using MIMEMultipart and MIMEText python libraries
 
-9)Improved the UI through CSS styles --- By Rewa Jayant Kale
+9)Search news by a keyword eg: desktops
 
-10)Added weather widget using accuweather.com widget to show current weather details --- By Rewa Jayant Kale
+10)Improved the UI through CSS styles
+
+11)Added weather widget using accuweather.com widget to show current weather details, mta widget for subway details
 

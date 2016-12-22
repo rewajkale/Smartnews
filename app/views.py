@@ -15,8 +15,8 @@ import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 import httplib2
-api = articleAPI('news api key')
-apikey='ny times api key'
+api = articleAPI('ny times api key')
+apikey='news api key'
 es = Elasticsearch()
 @app.route('/',methods=['GET', 'POST'])
 @app.route('/index')
@@ -295,6 +295,47 @@ def after_login(resp):
 @lm.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+@app.route('/search', methods=['POST','GET'])	
+def search():
+	keyword = request.form.get('keyword')
+	news = []
+	keywords = str(keyword).split(" ");
+	for k in keywords:
+		if(k !=""):
+			articles = api.search( q = k, fq = {'headline':k, 'source':['Reuters','AP', 'The New York Times']},begin_date = 20111231 )
+			for i in articles['response']['docs']:
+				try:
+					dic = {}
+					dic['id'] = i['_id']
+					if i['abstract'] is not None:
+						dic['abstract'] = i['abstract'].encode("utf8")
+					dic['headline'] = i['headline']['main'].encode("utf8")
+					dic['desk'] = i['news_desk']
+					dic['date'] = i['pub_date'][0:10] # cutting time of day.
+					dic['section'] = i['section_name']
+					if i['snippet'] is not None:
+						dic['snippet'] = i['snippet'].encode("utf8")
+					dic['source'] = i['source']
+					dic['type'] = i['type_of_material']
+					dic['url'] = i['web_url']
+					dic['word_count'] = i['word_count']
+					# locations
+					locations = []
+					for x in range(0,len(i['keywords'])):
+						if 'glocations' in i['keywords'][x]['name']:
+							locations.append(i['keywords'][x]['value'])
+					dic['locations'] = locations
+					# subject
+					subjects = []
+					for x in range(0,len(i['keywords'])):
+						if 'subject' in i['keywords'][x]['name']:
+							subjects.append(i['keywords'][x]['value'])
+					dic['subjects'] = subjects   
+					news.append(dic)
+				except(ValueError):
+					continue;
+	return render_template('search.html',keyword= keyword, dat=news)
 
 if __name__ == "__main__":
     h = httplib2.Http(".cache", disable_ssl_certificate_validation=True)

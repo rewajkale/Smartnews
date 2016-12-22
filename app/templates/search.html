@@ -26,10 +26,8 @@ header {
 <center><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgW9413EirNo0oaVLxfOSYtQo1hi0d65afP6vjgmuHgUko80ac" alt="The RK Times" width = "246" height = "90"></img></center>
 <center><b>Next Generation Smart News</b> </center>
 </header>
-  <form action="recommendation" method="post" name="checks">
-  <h3> Click below to go to Main Article </h3>
-<a href=" {{tags[0]}}">Go to Main article </a> <br><br><br>
-<h2> Similar News to Main Article </h2>
+  <form action="search" method="post" name="search">
+<h2> Search Results for keyword : {{keyword}} </h2>
  {% for i in dat %}
 <br><br>
 <b>{{i["headline"]}}</b><br><br>
